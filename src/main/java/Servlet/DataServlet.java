@@ -26,15 +26,18 @@ public class DataServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         MySQLConnectionJDBC.setConnection("localhost", "hitekdada", "root", "root");
-        sqlRebuild.createTable();
+
+        //if u need new table
+        /*sqlRebuild.createTable();*/
 
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
 
-        String json = new Gson().toJson(crudForURL.getAll());
-        out.println(json);
-        out.flush();
+            String json = new Gson().toJson(crudForURL.getAll());
+            out.println(json);
+            out.flush();
+
     }
 
 }
