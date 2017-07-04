@@ -15,11 +15,14 @@ public class MySQLConnectionJDBC{
     public static void setConnection(String portName, String dataBaseName, String userName, String passWord){
         connectionString = "jdbc:mysql://" + portName + "/" + dataBaseName + "?user=" + userName + "&password=" + passWord;
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             conn =
                     DriverManager.getConnection(connectionString);
         } catch (SQLException e) {
             e.printStackTrace();
             System.err.println("Error Connection");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 

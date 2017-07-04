@@ -1,5 +1,7 @@
 package DBConfig;
 
+import java.util.List;
+
 /**
  * Created by hitek on 03.07.2017.
  */
@@ -11,5 +13,7 @@ public interface CRUDForURL {
 
     public boolean updateURL(int ID, String URL);
 
-    public boolean getURL(int ID);
+    public String getURL(int ID);
+
+    public List getAll();
 }

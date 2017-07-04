@@ -11,7 +11,7 @@ public class CreateNewTableImpl implements CreateNewTable {
     public boolean createTable() {
 
         String query = "CREATE TABLE URL_TASK(" +
-                "ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY," +
+                " ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY," +
                 " URL TEXT," +
                 " STATUS_RESPONSE_CODE INT," +
                 " PERIOD_MMONITORING INT," +

@@ -10,12 +10,12 @@ import java.io.IOException;
 /**
  * Created by hitek on 03.07.2017.
  */
-@WebServlet("/")
-public class AppServlet extends HttpServlet {
+@WebServlet("/add")
+public class AddServlet extends HttpServlet {
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("lol.html").forward(request, response);
-        System.out.println("wvwvwevwevwevwe");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String URL = request.getParameter("URL");
+            System.out.println(URL);
     }
 
 }

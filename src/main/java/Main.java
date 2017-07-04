@@ -14,12 +14,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         MySQLConnectionJDBC.setConnection("localhost", "hitekdada", "root", "root");
-        Validate validate = new Validate("https://stackoverflow.com/questions/5435351/determine-size-of-http-response");
-        validate.codeResponse();
-        System.out.println(validate.timeToConnection());
-        System.out.println(validate.contentLenght());
-        System.out.println(validate.codeResponse());
-        System.out.println();
         sqlRebuild.createTable();
         MySQLConnectionJDBC.endConnection();
     }
